@@ -36,9 +36,14 @@
     combos {
         compatible = "zmk,combos";
 
-        br {
-            bindings = <&none>;
+        Left_brace {
+            bindings = <&kp LEFT_BRACE>;
             key-positions = <28 29>;
+        };
+
+        Right_brace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <30 31>;
         };
     };
 
