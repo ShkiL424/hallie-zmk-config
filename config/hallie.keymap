@@ -137,10 +137,10 @@
 
         fbuttons_layer {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6       &none      &none  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL  &none
-&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12      &none      &none  &none         &none           &none      &none
-&none   &none   &none   &none    &none    &none        &none      &none  &none         &none           &none      &none
-                        &mo 3    &mo 1    &kp SPACE    &kp ENTER  &mo 1  &mo 2
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6     &none  &none  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL  &none
+&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12    &none  &none  &none         &none           &none      &none
+&none   &none   &none   &none    &none    &none      &none  &none  &none         &none           &none      &none
+                        &none    &none    &none      &none  &none  &none
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW &inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
@@ -148,10 +148,10 @@
 
         adjust_layer {
             bindings = <
-&out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_CLR  &out OUT_USB    &none      &none  &none  &none  &none  &none
-&none         &none         &none         &none           &none       &none           &none      &none  &none  &none  &none  &none
-&sys_reset    &bootloader   &none         &studio_unlock  &none       &none           &none      &none  &none  &none  &none  &none
-                                          &mo 3           &mo 1       &kp SPACE       &kp ENTER  &mo 1  &mo 2
+&out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_CLR  &out OUT_USB    &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &out OUT_USB
+&none         &none         &none         &none           &none       &none           &none         &none         &none         &none         &none       &none
+&sys_reset    &bootloader   &none         &studio_unlock  &none       &none           &none         &none         &none         &none         &none       &none
+                                          &none           &none       &none           &none         &none         &none
             >;
 
             sensor-bindings =
