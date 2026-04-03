@@ -115,10 +115,10 @@
 
         lower_layer {
             bindings = <
-&kp TILDE  &kp N1    &kp N2  &kp N3            &kp N4    &kp N5       &kp N6     &kp N7     &kp N8        &kp N9                &kp N0        &kp KP_DIVIDE
-&kp GRAVE  &kp EXCL  &kp AT  &kp HASH          &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK     &kp LEFT_PARENTHESIS  &kp RPAR      &kp KP_MINUS
-&kp LSHFT  &none     &none   &none             &kp LBRC  &kp RBRC     &none      &none      &none         &none                 &kp KP_COMMA  &kp DOT
-                             &kp LEFT_COMMAND  &mo 1     &kp SPACE    &kp DOT    &kp COMMA  &kp QUESTION
+&kp TILDE  &kp N1        &kp N2  &kp N3            &kp N4    &kp N5       &kp N6     &kp N7     &kp N8        &kp N9                &kp N0        &kp KP_DIVIDE
+&kp GRAVE  &kp EXCL      &kp AT  &kp HASH          &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK     &kp LEFT_PARENTHESIS  &kp RPAR      &kp KP_MINUS
+&kp LSHFT  &kp LEFT_ALT  &none   &none             &kp LBRC  &kp RBRC     &none      &none      &none         &none                 &kp KP_COMMA  &kp LEFT_CONTROL
+                                 &kp LEFT_COMMAND  &mo 1     &kp SPACE    &kp DOT    &kp COMMA  &kp QUESTION
             >;
 
             sensor-bindings = <&inc_dec_kp PG_DN PG_UP &scroll_l_r>;
@@ -126,21 +126,23 @@
 
         raise_layer {
             bindings = <
-&none  &none  &kp PG_UP  &kp UP            &kp PG_DN  &kp HOME     &kp CARET  &kp PG_UP  &kp UP    &kp PG_DN  &kp HOME  &none
-&none  &none  &kp LEFT   &kp DOWN          &kp RIGHT  &kp END      &kp MINUS  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END   &none
-&none  &none  &none      &none             &none      &none        &none      &none      &none     &none      &none     &none
-                         &kp LEFT_COMMAND  &mo 1      &kp SPACE    &kp ENTER  &none      &kp CAPS
+&none           &none         &kp PG_UP  &kp UP            &kp PG_DN  &kp HOME     &kp CARET  &kp PG_UP  &kp UP    &kp PG_DN  &kp HOME  &none
+&none           &none         &kp LEFT   &kp DOWN          &kp RIGHT  &kp END      &kp MINUS  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END   &none
+&kp LEFT_SHIFT  &kp LEFT_ALT  &none      &none             &none      &none        &none      &none      &none     &none      &none     &kp LCTRL
+                                         &kp LEFT_COMMAND  &mo 1      &kp SPACE    &kp ENTER  &none      &kp CAPS
             >;
 
-            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW &inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
+            sensor-bindings =
+                <&inc_dec_kp DOWN_ARROW UP_ARROW>,
+                <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
         };
 
         fbuttons_layer {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6     &none  &none  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL  &none
-&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12    &none  &none  &none         &none           &none      &none
-&none   &none   &none   &none    &none    &none      &none  &none  &none         &none           &none      &none
-                        &none    &none    &none      &none  &none  &none
+&kp F1      &kp F2        &kp F3  &kp F4   &kp F5   &kp F6     &none  &none  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL  &none
+&kp F7      &kp F8        &kp F9  &kp F10  &kp F11  &kp F12    &none  &none  &none         &none           &none      &none
+&kp LSHIFT  &kp LEFT_ALT  &none   &none    &none    &none      &none  &none  &none         &none           &none      &kp LEFT_CONTROL
+                                  &none    &none    &none      &none  &none  &none
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW &inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
