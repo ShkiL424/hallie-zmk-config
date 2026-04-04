@@ -126,8 +126,8 @@
 
         raise_layer {
             bindings = <
-&none           &none         &kp PG_UP  &kp UP            &kp PG_DN  &kp HOME     &kp CARET  &kp PG_UP  &kp UP    &kp PG_DN  &kp HOME  &none
-&none           &none         &kp LEFT   &kp DOWN          &kp RIGHT  &kp END      &kp MINUS  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END   &none
+&kp ESCAPE      &none         &kp PG_UP  &kp UP            &kp PG_DN  &kp HOME     &kp CARET  &kp PG_UP  &kp UP    &kp PG_DN  &kp HOME  &none
+&kp TAB         &none         &kp LEFT   &kp DOWN          &kp RIGHT  &kp END      &kp MINUS  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END   &kp RIGHT_ALT
 &kp LEFT_SHIFT  &kp LEFT_ALT  &none      &none             &none      &none        &none      &none      &none     &none      &none     &kp LCTRL
                                          &kp LEFT_COMMAND  &mo 1      &kp SPACE    &kp ENTER  &none      &kp CAPS
             >;
