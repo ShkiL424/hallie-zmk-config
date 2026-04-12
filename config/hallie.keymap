@@ -121,7 +121,9 @@
                                    &kp LEFT_CONTROL  &kp LEFT_GUI   &kp SPACE           &kp KP_DOT    &kp RIGHT_GUI  &kp KP_COMMA
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_DN PG_UP &scroll_l_r>;
+            sensor-bindings =
+                <&inc_dec_kp PG_DN PG_UP>,
+                <&inc_dec_kp LS(PG_UP) PAGE_DOWN>;
         };
 
         raise_layer {
