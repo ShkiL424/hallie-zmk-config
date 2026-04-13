@@ -26,18 +26,29 @@
 #define DEF 0
 #define LWR 1
 #define RSE 2
-#define ADJ 3
+#define FNB 3
+#define ADJ 4
 
-&lt {
-    flavor = "tap-preferred";
-    tapping_term_ms = <150>;
+&lt { 
     quick_tap_ms = <200>;
-    require-prior-idle-ms = <100>;
 };
 
-&mt { quick_tap_ms = <200>; };
+&mt {
+    quick_tap_ms = <200>;
+};
 
 / {
+    behaviors {
+        lt_thumb: lt_thumb {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <200>;
+            bindings = <&mo>, <&kp>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -107,10 +118,10 @@
 
         default_layer {
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp F             &kp P         &kp B          &kp J        &kp L          &kp U         &kp Y          &kp COMMA  &lt 3 LEFT_BRACKET
+&kp ESC    &kp Q  &kp W  &kp F             &kp P         &kp B          &kp J        &kp L          &kp U         &kp Y          &kp COMMA  &lt FNB LEFT_BRACKET
 &kp TAB    &kp A  &kp R  &kp S             &kp T         &kp G          &kp M        &kp N          &kp E         &kp I          &kp O      &kp RIGHT_CONTROL
 &kp LSHFT  &kp Z  &kp X  &kp C             &kp D         &kp V          &kp K        &kp H          &kp DOT       &kp SEMICOLON  &kp SLASH  &kp RIGHT_ALT
-                         &kp LEFT_CONTROL  &kp LEFT_GUI  &lt 1 SPACE    &lt 2 ENTER  &kp BACKSPACE  &kp CAPSLOCK
+                         &kp LEFT_CONTROL  &kp LEFT_GUI  &lt_thumb LWR SPACE    &lt_thumb RSE ENTER  &kp BACKSPACE  &kp CAPSLOCK
             >;
 
             sensor-bindings =
