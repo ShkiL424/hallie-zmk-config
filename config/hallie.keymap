@@ -117,7 +117,7 @@
 
         kp_eqal {
             bindings = <&kp EQUAL>;
-            key-positions = <14>;
+            key-positions = <14 15>;
         };
     };
 
