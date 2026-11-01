@@ -124,13 +124,19 @@
             bindings = <&kp CAPSLOCK>;
             key-positions = <38 39>;
         };
+
+        change_lang {
+            bindings = <&lang>;
+            key-positions = <12 23>;
+            timeout-ms = <50>;
+        };
     };
 
     macros {
         lang: lang {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LA(SPACE) &tog 7>;
+            bindings = <&macro_tap>, <&kp LC(GRAVE) &tog 7>;
 
             label = "LANG";
             wait-ms = <40>;
@@ -224,11 +230,15 @@
 
         statica {
             bindings = <
-&kp TAB           &kp M  &kp E    &kp F         &kp SEMI  &kp DOT      &kp U      &kp COMMA  &kp H         &kp K  &kp LBKT  &trans
-&kp LEFT_CONTROL  &kp B  &kp T    &kp J         &kp R     &kp Z        &kp V      &kp N      &kp C         &kp Y  &kp P     &trans
-&kp LEFT_SHIFT    &kp A  &kp SQT  &kp S         &kp G     &kp Q        &kp L      &kp D      &kp X         &kp I  &kp W     &kp ESC
-                                  &kp LEFT_WIN  &trans    &kp SPACE    &kp ENTER  &trans     &kp LEFT_ALT
+&kp ESC         &kp M  &kp E    &kp F             &kp SEMI      &kp DOT              &kp U              &kp COMMA  &kp H          &kp K  &kp LBKT  &lt 3 LEFT_BRACKET
+&kp TAB         &kp B  &kp T    &kp J             &kp R         &kp Z                &kp V              &kp N      &kp C          &kp Y  &kp P     &kp RIGHT_CONTROL
+&kp LEFT_SHIFT  &kp A  &kp SQT  &lt_thumb 5 S     &kp G         &kp Q                &kp L              &kp D      &lt_thumb 6 X  &kp I  &kp W     &kp RIGHT_ALT
+                                &kp LEFT_CONTROL  &kp LEFT_GUI  &lt_thumb 1 SPACE    &lt_thumb 2 ENTER  &kp BSPC   &kp CAPS
             >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_DOWN C_VOL_UP>,
+                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
     };
 };
