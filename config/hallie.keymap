@@ -136,7 +136,7 @@
         lang: lang {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LC(GRAVE) &tog 0>;
+            bindings = <&macro_tap>, <&kp LC(GRAVE) &tog 1>;
 
             label = "LANG";
             wait-ms = <40>;
